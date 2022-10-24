@@ -28,25 +28,25 @@ public class SecurityConfig {
 
                 .and()
                 .formLogin()
-                //.loginPage("/login")
-                .usernameParameter("us")
-                .passwordParameter("pw")
-                .loginProcessingUrl("/loginpage")
-                .successHandler(new AuthenticationSuccessHandler() {
-                    @Override
-                    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-                        System.out.println(authentication.getName());
-                        response.sendRedirect(request.getRequestURL().toString());
-
-                    }
-                })
-                .failureHandler(new AuthenticationFailureHandler() {
-                    @Override
-                    public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
-                        System.out.println(request.getRequestURL());
-
-                    }
-                })
+//                //.loginPage("/login")
+//                .usernameParameter("us")
+//                .passwordParameter("pw")
+//                .loginProcessingUrl("/loginpage")
+//                .successHandler(new AuthenticationSuccessHandler() {
+//                    @Override
+//                    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
+//                        System.out.println(authentication.getName());
+//                        response.sendRedirect(request.getRequestURL().toString());
+//
+//                    }
+//                })
+//                .failureHandler(new AuthenticationFailureHandler() {
+//                    @Override
+//                    public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
+//                        System.out.println(request.getRequestURL());
+//
+//                    }
+//                })
                 .permitAll();
 
 
